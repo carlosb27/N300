@@ -1,0 +1,178 @@
+<!doctype html>
+<!--
+ Filename: FreshSize.html
+ Written by: Carlos Bustos (CB)
+ Purpose: Final Project for N300
+ Date: April 25, 2017
+ Original Build
+-->
+<html lang="en">
+    <head>
+		<title>FreshSize App</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- css to define theme colors -->
+		<link href="css/FreshSizeCSS.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="theme/FreshSizeTheme.css" />
+		<link rel="stylesheet" href="theme/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+		<!-- jQuery UI functionality -->
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+		<script type="text/javascript" src="javascript/FreshSize.js"></script>
+		<script src="validation/dist/jquery.validate.js"></script><!--simple form validation-->
+
+	</head>
+
+	<body>
+ 
+		<div data-role= "page" id= "pagehome">
+		
+			<div data-role="header">
+				<a href="#pagehome" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+				<h1>FreshSize</h1>
+				<a href="#pageinfo" data-icon="info">Info</a>
+			</div>	
+				<img src="image/FreshSizeLogo.png" id="logo" alt="freshsize" title="FreshSize Logo" ><!--image for FreshSize Logo-->	
+				
+			
+			<div data-role="main" class="ui-content" >
+				<h2>Size Me!</h2>
+				
+				<form id="sizeme">
+				<fieldset>
+				<div id="radioset" data-role="fieldcontain"><!--groups radio buttons, has two buttons -->
+					<label for="radio-1">Male</label>
+					<input type="radio" name="radio-1" id="radio-1" value="Male" checked="checked" />
+					
+					<label for="radio-2">Female</label>
+					<input type="radio" name="radio-1" id="radio-2" value="Female"/><br>
+				</div>	
+					<div data-role="fieldcontain">
+					<br><label for="brandfrom"><b>Select Brand From</b></label>
+					<select name="brandfrom" id="brandfrom">
+						<option>Levi</option>
+						<option>Dockers</option>
+						<option>Lee</option>
+						<option>Wrangler</option>
+					</select>
+					</div>
+
+					<div data-role="fieldcontain">
+					<br><label for="waist"><b>Waist Size:</b></label><!--Waist size slider -->
+					<input type="range" id="waist" name="waist" value="32" min="28" max="40" data-highlight="true"/>
+					</div>
+
+					<div data-role="fieldcontain">
+					<br><label for="length"><b>Length Size:</b></label><!--length size slider -->
+					<input type="range" id="length" name="length" value="32" min="28" max="38" data-highlight="true" />
+					</div>
+
+					<div data-role="fieldcontain">
+					<br><label for="brandto"> <b>Select Brand To</b></label>
+					<select name="brandto" id="brandto">
+						<option>Levi</option>
+						<option>Dockers</option>
+						<option>Lee</option>
+						<option>Wrangler</option>
+					</select><br>
+					</div>
+									
+					<br><input type="submit" id="myButton" value="Size Me!"/><!--submit button -->
+					<input type="reset" value="Reset"/><br><br><!--reset button -->
+				</fieldset>
+				
+				</form>
+						<aside>
+				
+							<div id="sizemebutton"></div><!--output area with echo-->
+				
+						</aside>
+			</div>
+
+					<div data-role="footer">
+						<h1>Copyright @ 2017 FreshSize</h1>
+					</div>
+		</div>
+
+		<div data-role= "page" id= "pageinfo">
+			<div data-role="header">
+				<a href="#pagehome" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left">Home</a>
+				<h1>FreshSize</h1>
+				<a href="#pageinfo" data-icon="info">Info</a>
+			</div>
+	
+			<div data-role="main" class="ui-content" >
+				<div class="ui-body ui-body-a ui-corner-all">
+				<h3><b>Information about FreshSize</b></h3>
+				
+				<p>FreshSize is an application that will tell you your pant size across multiple brands and lines.
+					Are you tired of taking three different sizes of jeans into the dressing room? 
+					FreshSize will tell you with accuracy the size you are for any brand that you are looking for. 
+					Shop online with 100% confidence knowing that you’ll get the perfect fit every time. 
+					Our revolutionary application synchronizes your size across brand names you’ve never even shopped in before. Click 
+					on this 
+					<a href="#pagetwo" data-transition="flow">Brands</a> link to see all the different brands that you could try out without
+						having to try on any pants!
+				</p>
+	
+				<p>Our company was founded on November 2016. We are based in Indianapolis, Indiana with the goal of 
+					helping others in the effort of saving them time and money in the search of new pants. 
+				</p>
+				</div>
+		
+				
+					<div data-role="main" class="ui-content">
+					<h2>Contact Us</h2>
+					<form id="contactus">
+					
+						<label for="fname"><b>First name:</b></label>
+						<input type="text" name="fname" id="fname" placeholder="First Name">
+						<label for="lname"><b>Last name:</b></label>
+						<input type="text" name="lname" id="lname" placeholder="Last Name">       
+				
+						<label for="email"><b>E-mail:</b></label>
+						<input type="email" name="email" id="email" placeholder="Your email here">
+				
+						<label for="tel"><b>Telephone Number:</b></label>
+						<input type="tel" name="phone" id="tel" value="" placeholder="(###) ###-####">
+				
+						<label for="info"><b>Comments:</b></label>
+						<textarea name="comments" id="info" placeholder="Your comment here"></textarea>
+		
+						<input type="submit" data-inline="true" value="Submit">
+						<input type="reset" data-inline="true" value="Reset"/>
+					</form>
+					</div>
+					<aside>
+				
+						<div id="submitbutton"></div><!--output area with echo-->
+			
+					</aside>
+			</div>
+		
+		
+		
+				<div data-role="footer">
+					<h1>Copyright @ 2017 FreshSize</h1>
+				</div>
+		</div>
+
+		<div data-role="page" data-dialog="true" id="pagetwo">
+			<div data-role="header">
+				<h1>Brands!</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<ul>
+					<li>Levi</li>
+					<li>Dockers</li>
+					<li>Lee</li>
+					<li>Wrangler</li>
+				</ul>  
+			</div>
+		</div> 
+  
+  
+	</body>
+</html>
